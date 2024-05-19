@@ -3,23 +3,35 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>P2P</title>
+    <title>FileBridge</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <button id="create-offer">Create Offer</button><br>
-    <label for="offer-sdp">Enter a offer code</label><br>
-    <textarea id="offer-sdp"  cols="60" rows="8" placeholder='User 2, paste SDP offer here...'></textarea><br>
-    <br><br><br>
-    <button id="create-answer">Create answer</button><br>
-    <label for="answer-sdp">SDP Answer:</label><br>
-    <textarea id="answer-sdp"  cols="60" rows="8" placeholder="User 1, paste SDP answer here..."></textarea>
-    <br><br><br>
-    <button id="add-answer">Add answer</button><br>
-    <input type="file" id="choose"><br>
-    <button id="send">Send</button><br>
-    <ul id="listaFajlova"></ul>
+<div id="povezivanje">
+    <div class="prozor">
+    <label>Kod za ponudu:</label>
+    <textarea id="offer-sdp"  cols="40" rows="6" placeholder='Primalac ovde unosi prosledjen kod..'></textarea>
+    <button id="create-offer" class="gornjaDugmad">Kreirajte ponudu</button>
+    </div>
+    <div class="prozor">
+    <label>SDP odgovor:</label>
+    <textarea id="answer-sdp"  cols="40" rows="6" placeholder="Posiljalac ovde unosi odgovor.."></textarea>
+    <button id="create-answer" class="gornjaDugmad">Kreirajte odgovor</button>
+    </div>
+</div>
+    
+<button id="add-answer" style="margin-top: 8vh; width: 20vw;">Zapocnite uparivanje</button><br>
+
+<div class="razmena">
+    <input type="file" id="choose" title="Izaberite fajl koji zelite da posaljete"><br>
+    <div id="donji">
+        <button id="send">Posalji fajl</button>
+        <ul id="listaFajlova"></ul>
+    </div>
+</div>
+
 </body>
 <script src='main.js'></script>
 </html>
