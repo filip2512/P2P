@@ -1,0 +1,98 @@
+*{
+    margin:0;
+}
+body{
+    background:rgb(46, 14, 111);
+    padding:8vh;
+}
+
+#povezivanje{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.prozor{
+    padding: 3vw;
+    background: linear-gradient(135deg, #f34079 40%, #fc894d);
+    width: 33vw;
+    height: 42vh;
+    font-size:30px;
+    border-radius: 20px;
+}
+
+.gornjaDugmad{
+    background: linear-gradient(135deg, #cb0303, #a261ba);
+}
+.gornjaDugmad:hover{
+    background: #fc894d;
+}
+
+button{
+    align-items: center;
+    background: linear-gradient(45deg, #048c87, #4dd9fc);
+    border: 0;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-family: "Codec cold",sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    width: 15vw;
+    margin: 5vh;
+  }
+
+  button:hover{
+    background: #fc894d;
+  }
+
+textarea{
+    font-size: 20px;
+    margin-top: 2vh;
+}
+
+.razmena{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+}
+
+#choose{
+
+    background-color: #9685c1;
+    padding: 3vh;
+
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(46, 14, 111);
+    border-radius: 10px;
+
+    font-size: 20px;
+}
+
+#listaFajlova{
+    list-style-type: none;
+    font-size: 25px;
+}
+
+#listaFajlova li{
+    padding: 2vh;
+   
+}
+#listaFajlova a{
+    text-decoration: none;
+    color: aliceblue;
+    background-color: #9685c1;
+    padding: 1vh;
+}
+
+#listaFajlova a:hover{
+    background: #fc894d;
+  }
+
+#donji{
+    display: flex;
+    flex-direction: row;
+}
