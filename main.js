@@ -60,15 +60,22 @@ peerConnection.ondatachannel = (event) => {
     receiveChannel.onmessage = (event) => {
         let receivedData = JSON.parse(event.data);
         let fileData = receivedData.fileData;
+        let fileName = receivedData.fileName;
 
         let downloadLink = document.createElement('a');
         downloadLink.href = fileData;
-        downloadLink.download = 'received_file';
+        downloadLink.download = 'Primljen fajl';
         downloadLink.innerHTML = 'Primljen fajl';
-        document.body.appendChild(downloadLink);
+        downloadLink.id = 'primljenFajl';
+        let li = document.createElement('li');
+        li.appendChild(downloadLink);
+        document.getElementById('listaFajlova').appendChild(li);
+
+    };
+    receiveChannel.onopen = (event) => {
+        console.log("Otvoreno povezivanje");
     };
 };
-
 
 document.getElementById('create-offer').addEventListener('click', createOffer);
 document.getElementById('create-answer').addEventListener('click', createAnswer);
